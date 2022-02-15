@@ -31,4 +31,4 @@ Then, place the file in the p3_collab-compet/ folder in the DRLND GitHub reposit
 
  <h2>Insructions for training an agent</h2>
 
-After you have followed the instructions above, open xxxx.ipynb (located in the p3_collab-compet/ folder in the DRLND GitHub repository) and follow the instructions to learn how to use the Python API to control the agent.
+After you have followed the instructions above, open Tennis.ipynb (located in the p3_collab-compet/ folder in the DRLND GitHub repository) and follow the instructions to learn how to use the Python API to control the agent.
