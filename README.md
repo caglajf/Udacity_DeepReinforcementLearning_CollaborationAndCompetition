@@ -7,6 +7,8 @@
   
   In this environment, two agents control rackets to bounce a ball over a net. If an agent hits the ball over the net, it receives a reward of +0.1. If an agent lets a ball hit the ground or hits the ball out of bounds, it receives a reward of -0.01. Thus, the goal of each agent is to keep the ball in play.
   
+ ![tennis](https://user-images.githubusercontent.com/51778059/154810154-dfc27554-f569-4fd6-8a62-ce8392f7a268.png)
+  
   <h2>The Environment</h2>
 The observation space consists of 8 variables corresponding to the position and velocity of the ball and racket. Each agent receives its own, local observation. Two continuous actions are available, corresponding to movement toward (or away from) the net, and jumping.
 
@@ -31,4 +33,4 @@ Then, place the file in the p3_collab-compet/ folder in the DRLND GitHub reposit
 
  <h2>Insructions for training an agent</h2>
 
-After you have followed the instructions above, open Tennis.ipynb (located in the p3_collab-compet/ folder in the DRLND GitHub repository) and follow the instructions to learn how to use the Python API to control the agent.
+After you have followed the instructions above, open Tennis.ipynb (located in the caglajf/Udacity_DeepReinforcementLearning_CollaborationAndCompetition repository) and follow the instructions to learn how to use the Python API to control the agent. In this project, Multi Agent Deep Deterministic Gradient (MADDPG) method was employed and the main classes were defined in the MADDPG_agent.py file.
