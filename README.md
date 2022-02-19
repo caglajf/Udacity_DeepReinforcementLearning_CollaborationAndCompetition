@@ -33,4 +33,6 @@ Then, place the file in the p3_collab-compet/ folder in the DRLND GitHub reposit
 
  <h2>Insructions for training an agent</h2>
 
-After you have followed the instructions above, open Tennis.ipynb (located in the "caglajf/Udacity_DeepReinforcementLearning_CollaborationAndCompetition" repository) and follow the instructions to learn how to use the Python API to control the agent. In this project, Multi Agent Deep Deterministic Gradient (MADDPG) method was employed and the main classes were defined in the MADDPG_agent.py file. The details of the method and the results were given in Report.md file.
+- After you have followed the instructions above, open Tennis.ipynb (located in the "caglajf/Udacity_DeepReinforcementLearning_CollaborationAndCompetition" repository) and follow the instructions to learn how to use the Python API to control the agent. 
+  
+ - In this project, Multi Agent Deep Deterministic Gradient (MADDPG) method was employed and the main classes were defined in the MADDPG_agent.py file. The details of the method and the results were given in Report.md file.
