@@ -24,33 +24,39 @@ The environment is considered solved, when the average (over 100 episodes) of th
   In order to train multiple agents, I implemented Multi Agent Deep Deterministic Policy Gradient [(MADDPG) algorithm](https://arxiv.org/pdf/1706.02275.pdf) as it requires the training of two separate agents, and the agents need to collaborate under certain situations (like don’t let the ball hit the ground) and compete under other situations (like gather as many points as possible). A MADDPG is composed of multiple DDPG agents.
   
   In MADDPG, each agent’s critic is trained using the observations and actions from all the agents, whereas each agent’s actor is trained using just its own observations. This allows the agents to be effectively trained without requiring other agents’ observations during inference (because the actor is only dependent on its own observations).You can find the pseudocode of the MADDPG algorithm below. 
+  
   <img width="427" alt="image" src="https://user-images.githubusercontent.com/51778059/154129979-fe786303-9596-4cec-b54e-1e7ee11937cb.png">
   
  
   <h4>Hyperparameters</h4>
-Replay buffer size: 10000
-Batch size: 256
-Gamma (discount factor): 0.99
-Tau (soft update of target parameters): 0.001
-Learning rate for actor: 0.0001
-Learning rate for critic: 0.001
-Weight decay: 0
-Noise decay: 1
+ Replay buffer size: 10000<br />
+ Batch size: 256<br />
+ Gamma (discount factor): 0.99<br />
+ Tau (soft update of target parameters): 0.001<br />
+ Learning rate for actor: 0.0001<br />
+ Learning rate for critic: 0.001<br />
+ Weight decay: 0<br />
+ Noise decay: 1<br />
 
    <h4>Model</h4>
-- Actor
-The Neural Network has two hidden layers with 256 and 256 neurons, respectively. The activation function used is ReLU for the input and first layer and tanh for the output The output layer has 4 values which corresponds to the dimension of each action.
-- Critic
-The Neural Network has two hidden layers with 256 and 256 neurons, respectively. The activation function used is ReLU for the input and first layer and none for the output. The output layer has just one value which corresponds to the assesment made by the critic of the action chosen by the actor.
+- Actor<br />
+  The Neural Network has two hidden layers with 256 and 256 neurons, respectively. The activation function used is ReLU for the input and first layer and tanh for the output The output layer has 4 values which corresponds to the dimension of each action.<br />
+ - Critic<br />
+  The Neural Network has two hidden layers with 256 and 256 neurons, respectively. The activation function used is ReLU for the input and first layer and none for the output. The output layer has just one value which corresponds to the assesment made by the critic of the action chosen by the actor.<br />
     
   <h2>Results</h2>
+  
   After implementing MADDPG method, the score evolution can be seen below:
+  
   <img width="356" alt="Screenshot 2022-02-19 211415" src="https://user-images.githubusercontent.com/51778059/154813625-ae2c893d-427f-40d1-9e37-81d1fee8792f.png">
-  ![plot](https://user-images.githubusercontent.com/51778059/154813632-3ffe3ddd-ce15-4a6b-a6ee-0f50e8ec5fb7.png)
-The environment has been successfully solved in 2311 episodes.
+  
+  ![plot](https://user-images.githubusercontent.com/51778059/154815382-80d3e9d3-3f96-415c-8cfb-e74f64e5e1a4.png)
 
-<h2>Ideas for Future Work</h2>
-   I implemented MADDPG method and solved the environment. In order to improve the performance of the agents, some other methods and improvements can also be tried. 
-  - More effort can be spent for hyperparameter optimization to improve results.
-  - Different algorithms can be implemented such as [A2C](https://medium.com/deeplearningmadeeasy/advantage-actor-critic-a2c-implementation-944e98616b), [PPO](https://openai.com/blog/openai-baselines-ppo/) or [D4PG](https://arxiv.org/pdf/1804.08617.pdf) to compare the performance of training. 
-  - Prioritized experience replay can also be tried to see if it improves the training time.
+ The environment has been successfully solved in 2311 episodes.
+
+ <h2>Ideas for Future Work</h2>
+  
+   I implemented MADDPG method and solved the environment. In order to improve the performance of the agents, some other methods and improvements can also be tried. <br />
+- More effort can be spent for hyperparameter optimization to improve results.<br />
+- Different algorithms can be implemented such as [A2C](https://medium.com/deeplearningmadeeasy/advantage-actor-critic-a2c-implementation-944e98616b), [PPO](https://openai.com/blog/openai-baselines-ppo/) or [D4PG](https://arxiv.org/pdf/1804.08617.pdf) to compare the performance of training. <br />
+- Prioritized experience replay can also be tried to see if it improves the training time.<br />
